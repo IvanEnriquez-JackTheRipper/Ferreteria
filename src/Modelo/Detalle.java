@@ -2,7 +2,7 @@ package Modelo;
 
 public class Detalle {
     private int id;
-    private int idProducto;  // ID del producto
+    private int idProducto;  
     private int cantidad;
     private double precio;
     private int idVenta;

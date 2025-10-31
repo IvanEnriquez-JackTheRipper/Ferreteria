@@ -47,7 +47,7 @@ public class VentaDao {
 
             rs = ps.getGeneratedKeys();
             if (rs.next()) {
-                return rs.getInt(1); // Retorna id generado de la venta
+                return rs.getInt(1);
             }
 
         } catch (SQLException e) {
@@ -62,6 +62,7 @@ public class VentaDao {
         return 0;
     }
 
+    //Registar Detalle del producto
     public boolean RegistrarDetalle(Detalle Dv) {
         String sql = "INSERT INTO detalles_venta (id_producto, cantidad, precio_unitario, id_venta) VALUES (?,?,?,?)";
         try {
@@ -85,6 +86,7 @@ public class VentaDao {
         }
     }
 
+    //Actualizar Stock Por Codigo
     public boolean ActualizarStockPorCodigo(int cantidadVendida, String codProducto){
     String sql = "UPDATE productos SET stock = stock - ? WHERE codigo = ?";
     try {
@@ -134,6 +136,7 @@ public class VentaDao {
         return ListaVenta;
     }
 
+    //Guardar Venta con Stock Actualizado
     public boolean GuardarVentaConStock(Venta v, List<Detalle> detalles){
     try{
         con = cn.getConnection();
@@ -150,7 +153,7 @@ public class VentaDao {
         rs = ps.getGeneratedKeys();
         int idVenta = 0;
         if(rs.next()){
-            idVenta = rs.getInt(1); // ID de la venta recién insertada
+            idVenta = rs.getInt(1);
         }
 
         // Registrar detalles y actualizar stock
@@ -173,7 +176,7 @@ public class VentaDao {
             ps.executeUpdate();
         }
 
-        con.commit(); // confirmar transacción
+        con.commit();
         return true;
 
     } catch(SQLException e){

@@ -2,12 +2,12 @@ package Modelo;
 
 public class Cliente {
     private int id;
-    private String dni;       // ✅ antes era int
+    private String dni;      
     private String nombre;
-    private String telefono;  // ✅ antes era int
+    private String telefono; 
     private String direccion;
 
-    // Getters y Setters
+   
     public int getId() {
         return id;
     }

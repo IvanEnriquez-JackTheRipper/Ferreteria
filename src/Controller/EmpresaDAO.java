@@ -14,7 +14,7 @@ public class EmpresaDAO {
     ResultSet rs;
     Conexion cn = new Conexion();
 
-    // 🔹 Método para buscar los datos de la empresa (id fijo = 1)
+    //Método para buscar los datos de la empresa (id fijo = 1)
     public Empresa BuscarDatos() {
         Empresa e = new Empresa();
         String sql = "SELECT * FROM empresa WHERE id = 1";
@@ -48,7 +48,6 @@ public class EmpresaDAO {
         return e;
     }
 
-    // 🔹 Método para modificar los datos de la empresa
     public boolean ModificarDatos(Empresa em) {
         String sql = "UPDATE empresa SET ruc=?, nombre=?, telefono=?, direccion=?, razon=? WHERE id=?";
 

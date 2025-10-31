@@ -17,6 +17,7 @@ public class ClienteDao {
     PreparedStatement ps;
     ResultSet rs;
 
+    //Registrar Clientes
     public boolean RegistrarCliente(Cliente cl) {
         String sql = "INSERT INTO clientes (dni, nombre, telefono, direccion) VALUES (?,?,?,?)";
         try {
@@ -40,6 +41,7 @@ public class ClienteDao {
         }
     }
 
+    //Listar Clientes
     public List<Cliente> ListarCliente() {
         List<Cliente> ListaCl = new ArrayList<>();
         String sql = "SELECT * FROM clientes";
@@ -68,6 +70,7 @@ public class ClienteDao {
         return ListaCl;
     }
 
+    //Eliminar Clientes
     public boolean EliminarCliente(int id) {
         String sql = "DELETE FROM clientes WHERE id = ?";
         try {
@@ -88,6 +91,7 @@ public class ClienteDao {
         }
     }
 
+    //Modificar Cliente
     public boolean ModificarCliente(Cliente cl) {
         String sql = "UPDATE clientes SET dni=?, nombre=?, telefono=?, direccion=? WHERE id=?";
         try {
@@ -112,6 +116,7 @@ public class ClienteDao {
         }
     }
 
+    //Buscar Cliente
     public Cliente Buscarcliente(String dni) {
     Cliente c = new Cliente();
     String sql = "SELECT * FROM clientes WHERE dni = ?";

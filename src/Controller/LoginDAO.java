@@ -37,6 +37,7 @@ public class LoginDAO {
         return l;
     }
     
+    //Registar Usuario
     public boolean Registrar(login reg){
         String sql = "INSERT INTO usuarios (nombre, usuario, pass, rol) VALUES (?,?,?,?)";
         try{

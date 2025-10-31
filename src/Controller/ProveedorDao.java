@@ -16,6 +16,7 @@ public class ProveedorDao {
     PreparedStatement ps;
     ResultSet rs;
 
+    //Registar Proveedor
     public boolean RegistrarProveedor(Proveedor pr) {
         String sql = "INSERT INTO proveedores (ruc, nombre, telefono, direccion, razon) VALUES (?,?,?,?,?)";
         try {
@@ -40,6 +41,7 @@ public class ProveedorDao {
         }
     }
 
+    //Listar Proveedor
     public List ListarProveedor() {
         List<Proveedor> Listapr = new ArrayList();
         String sql = "SELECT * FROM proveedores";
@@ -63,6 +65,7 @@ public class ProveedorDao {
         return Listapr;
     }
 
+    //Eliminar Proveedor
     public boolean EliminarProveedor(int id) {
         String sql = "DELETE FROM proveedores WHERE id = ?";
         try {
@@ -83,6 +86,7 @@ public class ProveedorDao {
         }
     }
     
+    //Modificar Proveedor
     public boolean ModificarProveedor(Proveedor pr){
         String sql = "UPDATE proveedores SET ruc=?, nombre=?, telefono=?, direccion=?, razon=? WHERE id=?";
         try {

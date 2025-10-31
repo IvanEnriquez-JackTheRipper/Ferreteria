@@ -81,7 +81,7 @@ public class ProductosDao {
         }
     }
 
-    // Modificar producto
+    // Modificar productos
     public boolean ModificarProductos(Productos pro) {
         String sql = "UPDATE productos SET codigo=?, nombre=?, proveedor=?, stock=?, precio=? WHERE id=?";
         try {

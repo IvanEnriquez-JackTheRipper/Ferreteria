@@ -11,7 +11,6 @@ public class Venta {
     
     public Venta(){}
 
-    // Getters y setters existentes...
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
