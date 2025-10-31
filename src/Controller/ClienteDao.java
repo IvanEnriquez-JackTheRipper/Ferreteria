@@ -117,6 +117,7 @@ public class ClienteDao {
     }
 
     //Buscar Cliente
+    
     public Cliente Buscarcliente(String dni) {
     Cliente c = new Cliente();
     String sql = "SELECT * FROM clientes WHERE dni = ?";
