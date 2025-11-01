@@ -1,6 +1,6 @@
 
 package Modelo;
-
+//CREADO POR JOAQUIN
 public class login {
     private int id;
     private String nombre;

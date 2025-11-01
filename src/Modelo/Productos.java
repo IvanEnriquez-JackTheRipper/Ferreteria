@@ -1,5 +1,5 @@
 package Modelo;
-
+//CREADO POR JOAQUIN
 public class Productos {
 
     private int id;

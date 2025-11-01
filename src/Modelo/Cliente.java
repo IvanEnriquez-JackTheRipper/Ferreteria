@@ -1,5 +1,6 @@
 package Modelo;
 
+//CREADO POR JOAQUIN
 public class Cliente {
     private int id;
     private String dni;      
