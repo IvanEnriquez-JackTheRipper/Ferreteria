@@ -1,5 +1,5 @@
 package Controller;
-
+//CREADO POR DANIEL
 import Modelo.Conexion;
 import Modelo.Detalle;
 import Modelo.Venta;
