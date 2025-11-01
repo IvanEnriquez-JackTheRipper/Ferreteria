@@ -1,5 +1,5 @@
 package Modelo;
-
+//CREADO POR JOAQUIN
 public class Empresa {
     private int id;
     private String ruc;
